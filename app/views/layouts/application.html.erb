@@ -1,14 +1,37 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SmuSmy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <title>SMuSmy</title>
+<%= stylesheet_link_tag    "application", media: "all",
+    "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name %>'>
 
-<%= yield %>
+<body class="<%= controller.controller_name %>">
+
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "SmuSmy" %> 
+  </div> <!-- END BANNER_tag -->
+
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="http://www....">Bracelets</a></li>
+        <li><a href="http://www..../faq">Hair</a></li>
+        <li><a href="http://www..../news">Rings</a></li>
+        <li><a href="http://www..../contact">Necklaces</a></li>
+      </ul>
+    </div> <!-- END SIDE_tag -->
+    <div id="main">
+
+      <%= yield %>
+
+    </div> <!-- END MAIN_tag -->
+  </div> <!-- END COLUMNS_tag -->
 
 </body>
 </html>

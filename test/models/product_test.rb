@@ -15,7 +15,7 @@ class ProductTest < ActiveSupport::TestCase
 
 	test "product price must be positive" do
 		product = Product.new(	title: 	products(:ruby).title,
-								description: "yyy"
+								description: "yyy",
 								image_url: "zzz.jpg")
 		product.price = -1
 		assert product.invalid?
@@ -24,17 +24,17 @@ class ProductTest < ActiveSupport::TestCase
 
 		product.price = 0
 		assert product.invalid?
-		assert equal ["must be greater than or equal to 0.01"],
+		assert_equal ["must be greater than or equal to 0.01"],
 		product.errors[:price]
 
 		product.price = 1
-		assert product.valid?
+		assert product.valid?, '#{product} should be valid'
 	end
 
 	def new_product(image_url)
 		Product.new(	title: "Title of the product",
-						description: "yyy"
-						price: 2,
+						description: "yyy",
+						price: 2.0,
 						image_url: image_url)
 	end
 
@@ -42,11 +42,12 @@ class ProductTest < ActiveSupport::TestCase
 		ok = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg
              http://a.b.c/x/y/z/fred.gif }
     	bad = %w{ fred.doc fred.gif/more fred.gif.more }
-    ok.each do |name|
-    	assert new_product(name).valid?, "#{name} should be valid"
+	    ok.each do |name|
+	    	assert new_product(name).valid?, "#{name} should be valid"
+		end
+		bad.each do |name|
+			assert new_product(name).invalid?, "#{name} shouldn't be valid"
+		end		
 	end
-	bad.each do |name|
-		assert new_product(name).invalid?, "#{name} shouldn't be valid"
-	end		
 
 end

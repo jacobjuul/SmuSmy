@@ -13,15 +13,19 @@
 <body class="<%= controller.controller_name %>">
 
   <div id="banner">
-    <%= image_tag("logo.png") %>
-    <%= @page_title || "SmuSmy" %> 
+    <%=link_to image_tag("logo.png"), store_path %>
+ 
   </div> <!-- END BANNER_tag -->
 
   <div id="columns">
     <div id="side">
-      <div id="cart">
+      <!-- START:hidden_div -->
+      <% if @cart %>
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
         <%= render @cart %>
-      </div>
+      <% end %>
+      <% end %>
+    <!-- END:hidden_div -->
       
       <ul>
         <li><a href="/bracelets">Bracelets</a></li>

@@ -21,7 +21,7 @@ class UsersControllerTest < ActionController::TestCase
       post :create, user: { name: @user.name, password: 'secret', password_confirmation: 'secret' }
     end
 
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to store_path
   end
 
   test "should show user" do

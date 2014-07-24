@@ -1,0 +1,11 @@
+
+<h1>Welcome</h1>
+
+It's <%= Time.now %>
+We have <%= pluralize(@total_orders, "order") %>.
+<br>
+<% @orders.each do |order| %>
+<ul>
+<li><%= link_to order.line_items.product, order %></li>
+</ul>
+<% end %>

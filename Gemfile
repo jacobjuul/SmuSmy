@@ -42,3 +42,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'jquery-ui-rails'
+
+#CSS Framework with grid system
+gem 'foundation-rails'

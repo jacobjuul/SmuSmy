@@ -8,38 +8,201 @@
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
+  <style>
+  
+	.responsive-hide
+	{
+	}
+
+	@media only screen and (max-width: 1000px)
+	{
+		.responsive-hide{
+			display: none;
+		}
+	}
+
+	.responsive-show
+	{
+		display: none;
+	}
+
+	@media only screen and (max-width: 1000px)
+	{
+		.responsive-show{
+			display: block;
+		}
+	}
+	
+	.bg-color-grey
+	{
+		background-color: rgb(183,182,182);
+	}
+
+	.bg-color-pink
+	{
+		background-color: rgb(221,158,167);
+	}
+	
+	.no-max-width
+	{
+		max-width: none !important;
+	}
+	
+	.text-right
+	{
+		text-align: right;
+	}
+	
+	.line
+	{
+	    width:100%;
+		height:0.2rem;
+		background-color:#000000;
+		display:block;
+		border: rgb(191, 191, 191) 0.1rem;
+		border-style: solid;
+	}
+	
+	</style>
+	
 </head>
 
 <body class="<%= controller.controller_name %>">
 
-  <div id="banner">
-    <%=link_to image_tag("logo.png"), store_path %>
- 
-  </div> <!-- END BANNER_tag -->
+  <div class="row bg-color-grey no-max-width">
+	<div class="large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
+	<div class="large-6 columns text-right">REGISTER / LOGIN</div>
+  </div>
 
-  <div id="columns">
-    <div id="side">
-      <!-- START:hidden_div -->
-      <% if @cart %>
-      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-        <%= render @cart %>
-      <% end %>
-      <% end %>
-    <!-- END:hidden_div -->
-      
-      <ul>
-        <li><a href="/bracelets">Bracelets</a></li>
-        <li><a href="/hair">Hair</a></li>
-        <li><a href="/Rings">Rings</a></li>
-        <li><a href="/Necklaces">Necklaces</a></li>
-      </ul>
-    </div> <!-- END SIDE_tag -->
-    <div id="main">
+  <div class="row no-max-width">
+	<div class="large-4 columns">
+      <form>
+		  <div class="row">
+			<div class="small-3 column">
+			  <label for="input-subscribe" class="right inline">SUBSCRIBE</label>
+			</div>
+			<div class="small-9 column">
+			  <input type="text" name="input-subscribe" placeholder="Enter e-mail address">
+			</div>
+		  </div>
+	  </form>
+	  </div>
+	<div class="large-4 columns">
+		<center><%=link_to image_tag("logo.png"), store_path %></center>
+	</div>
+	<div class="large-4 columns text-right">SHOPPING BAG</div>
+  </div>
+  
+  <div class="row no-max-width bg-color-pink">
+	<div class="large-1 large-offset-3 column"><center>New Arrivals</center></div>
+	<div class="large-1 column"><center>Earrings</center></div>
+	<div class="large-1 column"><center>Bracelets</center></div>
+	<div class="large-1 column"><center>Necklaces</center></div>
+	<div class="large-1 column"><center>Gifts</center></div>
+	<div class="large-1 column end"><center>Sale</center></div>
+  </div>
+  
+  <div>
+    HOME / EARRINGS
+  </div>
 
-      <%= yield %>
+  <div class="row no-max-width" style="padding:2%">
+  
+    <div class="large-5 column bg-color-grey" style="padding:2%">
+		<center>
+			<span style="font-size:4rem;vertical-align:middle;">&lt;</span>
+				<%=link_to image_tag("spongebob.jpg"), store_path %>
+			<span style="font-size:4rem;vertical-align:middle;">&gt;</span>
+		</center>
+	</div>
+	
+	<div class="large-7 column bg-color-pink" style="padding:2%">
+		
+		<div class="row">
+			<div class="medium-6 column" style="padding:1%">
+				Crappy Stuff Here
+				
+				<p>Description here.</p>
+				<p>Available in Gold and Silver.</p>
+				<p>Gold Plated 18K</p>
+				<p>2.4cm * 1.5cm</p>
+				<p>Product Code 238805</p>
+				
+				<div>
+				FOLLOW US
+				</div>
+			</div>
+			<div class="medium-6 column" style="padding:1%">
 
-    </div> <!-- END MAIN_tag -->
-  </div> <!-- END COLUMNS_tag -->
+				<div class="row">
+					<div class="small-8 column center">
+						<input type="text" placeholder="Gold or Silver?">
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-5 column"><label for="input-quantity" class="right inline">Qty.</label></div>
+					<div class="small-3 column end"><input type="text" name="input-quantity" placeholder="quantity" value="1"></div>
+				</div>
+				<div class="row">
+					<div class="small-8 column center">
+						<button class="button expand">Add to bag</button>
+					</div>
 
+				</div>
+				<div class="row">
+					<div class="small-8 column center">
+						<button class="button expand">Save to box</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+  </div>
+  
+  
+  <div class="row no-max-width">
+  
+	<div class="large-6 column">
+		Recently Viewed Items
+		<span class="line"></span>
+		
+		<div class="row">
+			<div class="small-4 column" style="padding:3%">
+			<%=link_to image_tag("spongebob.jpg"), store_path %>
+			</div>
+			<div class="small-4 column" style="padding:3%">
+			<%=link_to image_tag("spongebob.jpg"), store_path %>
+			</div>
+			<div class="small-4 column" style="padding:3%">
+			<%=link_to image_tag("spongebob.jpg"), store_path %>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="large-6 column">
+		You May Also Like
+		<span class="line"></span>
+		
+		<div class="row">
+			<div class="small-4 column" style="padding:3%">
+			<%=link_to image_tag("spongebob.jpg"), store_path %>
+			</div>
+			<div class="small-4 column" style="padding:3%">
+			<%=link_to image_tag("spongebob.jpg"), store_path %>
+			</div>
+			<div class="small-4 column" style="padding:3%">
+			<%=link_to image_tag("spongebob.jpg"), store_path %>
+			</div>
+		</div>
+		
+	</div>
+	
+  </div>
+  
 </body>
 </html>

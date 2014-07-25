@@ -54,6 +54,11 @@
 		text-align: right;
 	}
 	
+	.text-center
+	{
+		text-align: center;
+	}
+	
 	.line
 	{
 	    width:100%;
@@ -64,52 +69,145 @@
 		border-style: solid;
 	}
 	
+	.small-black-box
+	{
+		width:26px;
+		height:26px;
+		background-color:#000000;
+		display:inline-block;
+		border: rgb(191, 191, 191) 1px;
+		border-style: solid;
+	}
+	
+	/*Font List
+	(make sure the sizes are big/small enough in relation to the size of the logo.)
+	*/
+	
+	.font-century-gothic
+	{
+		font-family:Century Gothic;
+		/*All text in the header
+		Menu bar
+		(# of items in the shopping bag)*/
+	}
+
+	.font-avnir-book-oblique
+	{
+		font-family:Avnir Book Oblique;
+		/*Shopping Bag*/
+	}
+	
+	.font-century-schoolbook
+	{
+		font-family:Century Schoolbook;
+		/*Product name*/
+	}
+	
+	.font-calibri
+	{
+		font-family:Calibri;
+		/*Product description
+		Home / Category*/
+	}
+	
+	.font-calibri-italic
+	{
+		font-family:Calibri Italic;
+		/*You May Also Like
+		Recently Viewed Items*/
+	}
+	
+	.font-ligth-up-the-world
+	{
+		font-family:Light up the world; 
+		/*Add to bag
+		Save to box*/
+	}
+	
+	.padding-top-small
+	{
+		padding-top:0.2rem;
+	}
+	
+	.padding-bottom-small
+	{
+		padding-bottom:0.2rem;
+	}
+	
+	.font-size-10
+	{
+		font-size:10px;
+	}
+	
+	.logo
+	{
+		height:6rem;
+	}
 	</style>
 	
 </head>
 
 <body class="<%= controller.controller_name %>">
 
-  <div class="row bg-color-grey no-max-width">
-	<div class="large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
-	<div class="large-6 columns text-right">REGISTER / LOGIN</div>
+  <div class="row bg-color-grey no-max-width font-century-gothic padding-bottom-small padding-top-small responsive-hide">
+	<div class="medium-6 large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
+	<div class="medium-6 large-6 columns text-right">REGISTER / LOGIN</div>
   </div>
 
-  <div class="row no-max-width">
-	<div class="large-4 columns">
-      <form>
-		  <div class="row">
-			<div class="small-3 column">
-			  <label for="input-subscribe" class="right inline">SUBSCRIBE</label>
-			</div>
-			<div class="small-9 column">
-			  <input type="text" name="input-subscribe" placeholder="Enter e-mail address">
-			</div>
-		  </div>
-	  </form>
+  <div class="row no-max-width padding-bottom-small padding-top-small responsive-hide">
+	<div class="medium-4 large-3 column">
+      <div style="padding-top:5rem;">
+		<input type="text" name="input-subscribe" placeholder="Subscribe, enter e-mail address" class="font-size-10">
 	  </div>
-	<div class="large-4 columns">
-		<center><%=link_to image_tag("logo.png"), store_path %></center>
 	</div>
-	<div class="large-4 columns text-right">SHOPPING BAG</div>
+	<div class="medium-4 large-4 large-offset-1 column" style="padding-top:0.8rem;">
+		<center><%=link_to image_tag("logo.png", class: "logo"), store_path%></center>
+	</div>
+	<div class="medium-4 large-4 column text-right font-avnir-book-oblique" style="padding-top:6rem;font-size:14px;font-style:italic">Shopping Bag</div>
+  </div>
+
+  <div class="responsive-show bg-color-grey font-century-gothic text-center">
+	<div class="padding-bottom-small padding-top-small font-size-10">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
+	<div class="padding-bottom-small padding-top-small">REGISTER / LOGIN</div>
   </div>
   
-  <div class="row no-max-width bg-color-pink">
-	<div class="large-1 large-offset-3 column"><center>New Arrivals</center></div>
-	<div class="large-1 column"><center>Earrings</center></div>
-	<div class="large-1 column"><center>Bracelets</center></div>
-	<div class="large-1 column"><center>Necklaces</center></div>
-	<div class="large-1 column"><center>Gifts</center></div>
-	<div class="large-1 column end"><center>Sale</center></div>
+  <div class="responsive-show" style="margin-top:1rem">
+	<div class="padding-top-small padding-bottom-small">
+		<center><%=link_to image_tag("logo.png", class: "logo"), store_path%></center>
+	</div>
+	<div class="font-avnir-book-oblique padding-top-small padding-bottom-small" style="font-size:20px;font-style:italic">
+		<center>
+			Shopping Bag
+		</center>
+	</div>
   </div>
   
-  <div>
-    HOME / EARRINGS
+  <div class="row no-max-width bg-color-pink padding-bottom-small padding-top-small font-century-gothic">
+	<div class="large-5 large-offset-1 column padding-bottom-small padding-top-small">
+		<div class="row">
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>New&nbsp;Arrivals</center></div>
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Earrings</center></div>
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Bracelets</center></div>
+		</div>
+	</div>
+	<div class="large-5 end column padding-bottom-small padding-top-small">
+		<div class="row">
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Necklaces</center></div>
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Gifts</center></div>
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Sale</center></div>
+		</div>	
+	</div>
+  </div>
+
+
+  
+  <div class="font-calibri" style="padding-top:1rem">
+    <span style="padding-left:2rem">HOME / EARRINGS</span>
   </div>
 
   <div class="row no-max-width" style="padding:2%">
   
-    <div class="large-5 column bg-color-grey" style="padding:2%">
+    <div class="large-5 column" style="padding:2%">
 		<center>
 			<span style="font-size:4rem;vertical-align:middle;">&lt;</span>
 				<%=link_to image_tag("spongebob.jpg"), store_path %>
@@ -117,48 +215,61 @@
 		</center>
 	</div>
 	
-	<div class="large-7 column bg-color-pink" style="padding:2%">
+	<div class="large-7 column" style="padding:2%">
 		
 		<div class="row">
-			<div class="medium-6 column" style="padding:1%">
-				Crappy Stuff Here
+			<div class="medium-8 column" style="padding:1%">
+				<span class="font-century-schoolbook" style="font-style:italic;font-weight:800;font-size:2rem">She's Badass Earrings</span>
 				
-				<p>Description here.</p>
-				<p>Available in Gold and Silver.</p>
-				<p>Gold Plated 18K</p>
-				<p>2.4cm * 1.5cm</p>
-				<p>Product Code 238805</p>
-				
-				<div>
-				FOLLOW US
+				<div class="font-century-gothic" style="padding-top:4%;padding-left:10%">
+					<p style="margin-bottom:0;">Description here.</p>
+					<p>Available in Gold and Silver.</p>
+					<p style="margin-bottom:0;">Gold Plated 18K</p>
+					<p>2.4cm * 1.5cm</p>
+					<p>Product Code 238805</p>
+					
+					<div style="padding-top:15%">
+						<div>
+							<span style="font-weight:800">FOLLOW US</span>
+							<div style="margin-top:4px;">
+								<span class="small-black-box"></span>
+								<span class="small-black-box"></span>
+								<span class="small-black-box"></span>
+								<span class="small-black-box"></span>
+								<span class="small-black-box"></span>
+							</div>
+						</div>
+					</div>
+					
 				</div>
+
 			</div>
-			<div class="medium-6 column" style="padding:1%">
+			<div class="medium-4 column" style="padding:1%">
 
 				<div class="row">
 				
-					<div class="small-8 column center">
+					<div class="small-12 column center">
 						<input type="text" placeholder="Gold or Silver?">
 					</div>
 					
 				</div>
 				<div class="row">
 				
-					<div class="small-5 column"><label for="input-quantity" class="right inline">Qty.</label></div>
-					<div class="small-3 column end"><input type="text" name="input-quantity" placeholder="quantity" value="1"></div>
+					<div class="small-6 small-offset-2 column"><label for="input-quantity" class="right inline">Qty.</label></div>
+					<div class="small-4 column end"><input type="text" name="input-quantity" placeholder="quantity" value="1"></div>
 					
 				</div>
 				
 				<div class="row">
 				
-					<div class="small-8 column center">
+					<div class="small-12 column center">
 						<button class="button expand">Add to bag</button>
 					</div>
 
 				</div>
 				<div class="row">
 				
-					<div class="small-8 column center">
+					<div class="small-12 column center">
 						<button class="button expand">Save to box</button>
 					</div>
 

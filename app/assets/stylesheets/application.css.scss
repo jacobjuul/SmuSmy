@@ -15,4 +15,137 @@
  */
  
 /*= require foundation */
+
+.responsive-hide
+	{
+	}
+
+	@media only screen and (max-width: 1000px)
+	{
+		.responsive-hide{
+			display: none;
+		}
+	}
+
+	.responsive-show
+	{
+		display: none;
+	}
+
+	@media only screen and (max-width: 1000px)
+	{
+		.responsive-show{
+			display: block;
+		}
+	}
+	
+	.bg-color-grey
+	{
+		background-color: rgb(183,182,182);
+	}
+
+	.bg-color-pink
+	{
+		background-color: rgb(221,158,167);
+	}
+	
+	.no-max-width
+	{
+		max-width: none !important;
+	}
+	
+	.text-right
+	{
+		text-align: right;
+	}
+	
+	.text-center
+	{
+		text-align: center;
+	}
+	
+	.line
+	{
+	    width:100%;
+		height:0.2rem;
+		background-color:#000000;
+		display:block;
+		border: rgb(191, 191, 191) 0.1rem;
+		border-style: solid;
+	}
+	
+	.small-black-box
+	{
+		width:26px;
+		height:26px;
+		background-color:#000000;
+		display:inline-block;
+		border: rgb(191, 191, 191) 1px;
+		border-style: solid;
+	}
+	
+	/*Font List
+	(make sure the sizes are big/small enough in relation to the size of the logo.)
+	*/
+	
+	.font-century-gothic
+	{
+		font-family:Century Gothic;
+		/*All text in the header
+		Menu bar
+		(# of items in the shopping bag)*/
+	}
+
+	.font-avnir-book-oblique
+	{
+		font-family:Avnir Book Oblique;
+		/*Shopping Bag*/
+	}
+	
+	.font-century-schoolbook
+	{
+		font-family:Century Schoolbook;
+		/*Product name*/
+	}
+	
+	.font-calibri
+	{
+		font-family:Calibri;
+		/*Product description
+		Home / Category*/
+	}
+	
+	.font-calibri-italic
+	{
+		font-family:Calibri Italic;
+		/*You May Also Like
+		Recently Viewed Items*/
+	}
+	
+	.font-ligth-up-the-world
+	{
+		font-family:Light up the world; 
+		/*Add to bag
+		Save to box*/
+	}
+	
+	.padding-top-small
+	{
+		padding-top:0.2rem;
+	}
+	
+	.padding-bottom-small
+	{
+		padding-bottom:0.2rem;
+	}
+	
+	.font-size-10
+	{
+		font-size:10px;
+	}
+	
+	.logo
+	{
+		height:6rem;
+	}
  

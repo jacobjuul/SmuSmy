@@ -9,142 +9,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   
-  <style>
-  
-	.responsive-hide
-	{
-	}
-
-	@media only screen and (max-width: 1000px)
-	{
-		.responsive-hide{
-			display: none;
-		}
-	}
-
-	.responsive-show
-	{
-		display: none;
-	}
-
-	@media only screen and (max-width: 1000px)
-	{
-		.responsive-show{
-			display: block;
-		}
-	}
-	
-	.bg-color-grey
-	{
-		background-color: rgb(183,182,182);
-	}
-
-	.bg-color-pink
-	{
-		background-color: rgb(221,158,167);
-	}
-	
-	.no-max-width
-	{
-		max-width: none !important;
-	}
-	
-	.text-right
-	{
-		text-align: right;
-	}
-	
-	.text-center
-	{
-		text-align: center;
-	}
-	
-	.line
-	{
-	    width:100%;
-		height:0.2rem;
-		background-color:#000000;
-		display:block;
-		border: rgb(191, 191, 191) 0.1rem;
-		border-style: solid;
-	}
-	
-	.small-black-box
-	{
-		width:26px;
-		height:26px;
-		background-color:#000000;
-		display:inline-block;
-		border: rgb(191, 191, 191) 1px;
-		border-style: solid;
-	}
-	
-	/*Font List
-	(make sure the sizes are big/small enough in relation to the size of the logo.)
-	*/
-	
-	.font-century-gothic
-	{
-		font-family:Century Gothic;
-		/*All text in the header
-		Menu bar
-		(# of items in the shopping bag)*/
-	}
-
-	.font-avnir-book-oblique
-	{
-		font-family:Avnir Book Oblique;
-		/*Shopping Bag*/
-	}
-	
-	.font-century-schoolbook
-	{
-		font-family:Century Schoolbook;
-		/*Product name*/
-	}
-	
-	.font-calibri
-	{
-		font-family:Calibri;
-		/*Product description
-		Home / Category*/
-	}
-	
-	.font-calibri-italic
-	{
-		font-family:Calibri Italic;
-		/*You May Also Like
-		Recently Viewed Items*/
-	}
-	
-	.font-ligth-up-the-world
-	{
-		font-family:Light up the world; 
-		/*Add to bag
-		Save to box*/
-	}
-	
-	.padding-top-small
-	{
-		padding-top:0.2rem;
-	}
-	
-	.padding-bottom-small
-	{
-		padding-bottom:0.2rem;
-	}
-	
-	.font-size-10
-	{
-		font-size:10px;
-	}
-	
-	.logo
-	{
-		height:6rem;
-	}
-	</style>
-	
+  	
 </head>
 
 <body class="<%= controller.controller_name %>">
@@ -155,7 +20,11 @@
 
   <div class="row bg-color-grey no-max-width font-century-gothic padding-bottom-small padding-top-small responsive-hide">
 	<div class="medium-6 large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE $75</div>
-	<div class="medium-6 large-6 columns text-right"><%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %></div>
+	<% unless user_signed_in? %>
+	<div class="medium-6 large-6 columns text-right">
+
+		<%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %></div>
+		<% end %>
   </div>
 
   <div class="row no-max-width padding-bottom-small padding-top-small responsive-hide">
@@ -203,131 +72,11 @@
 	</div>
   </div>
 
-
-  
-  <div class="font-calibri" style="padding-top:1rem">
-    <span style="padding-left:2rem">HOME / EARRINGS</span>
-  </div>
-
-  <div class="row no-max-width" style="padding:2%">
-  
-    <div class="large-5 column" style="padding:2%">
-		<center>
-			<span style="font-size:4rem;vertical-align:middle;">&lt;</span>
-				<%=link_to image_tag("spongebob.jpg"), store_path %>
-			<span style="font-size:4rem;vertical-align:middle;">&gt;</span>
-		</center>
-	</div>
-	
-	<div class="large-7 column" style="padding:2%">
-		
-		<div class="row">
-			<div class="medium-8 column" style="padding:1%">
-				<span class="font-century-schoolbook" style="font-style:italic;font-weight:800;font-size:2rem">She's Badass Earrings</span>
-				
-				<div class="font-century-gothic" style="padding-top:4%;padding-left:10%">
-					<p style="margin-bottom:0;">Description here.</p>
-					<p>Available in Gold and Silver.</p>
-					<p style="margin-bottom:0;">Gold Plated 18K</p>
-					<p>2.4cm * 1.5cm</p>
-					<p>Product Code 238805</p>
-					
-					<div style="padding-top:15%">
-						<div>
-							<span style="font-weight:800">FOLLOW US</span>
-							<div style="margin-top:4px;">
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-
-			</div>
-			<div class="medium-4 column" style="padding:1%">
-
-				<div class="row">
-				
-					<div class="small-12 column center">
-						<input type="text" placeholder="Gold or Silver?">
-					</div>
-					
-				</div>
-				<div class="row">
-				
-					<div class="small-6 small-offset-2 column"><label for="input-quantity" class="right inline">Qty.</label></div>
-					<div class="small-4 column end"><input type="text" name="input-quantity" placeholder="quantity" value="1"></div>
-					
-				</div>
-				
-				<div class="row">
-				
-					<div class="small-12 column center">
-						<button class="button expand">Add to bag</button>
-					</div>
-
-				</div>
-				<div class="row">
-				
-					<div class="small-12 column center">
-						<button class="button expand">Save to box</button>
-					</div>
-
-				</div>
-				
-			</div>
-		</div>
-		
-	</div>
-	
-  </div>
-  
-  
-  <div class="row no-max-width">
-  
-	<div class="large-6 column">
-		Recently Viewed Items
-		<span class="line"></span>
-		
-		<div class="row">
-			<div class="small-4 column" style="padding:3%">
-			<%=link_to image_tag("spongebob.jpg"), store_path %>
-			</div>
-			<div class="small-4 column" style="padding:3%">
-			<%=link_to image_tag("spongebob.jpg"), store_path %>
-			</div>
-			<div class="small-4 column" style="padding:3%">
-			<%=link_to image_tag("spongebob.jpg"), store_path %>
-			</div>
-		</div>
-		
-	</div>
-	
-	<div class="large-6 column">
-		You May Also Like
-		<span class="line"></span>
-		
-		<div class="row">
-			<div class="small-4 column" style="padding:3%">
-			<%=link_to image_tag("spongebob.jpg"), store_path %>
-			</div>
-			<div class="small-4 column" style="padding:3%">
-			<%=link_to image_tag("spongebob.jpg"), store_path %>
-			</div>
-			<div class="small-4 column" style="padding:3%">
-			<%=link_to image_tag("spongebob.jpg"), store_path %>
-			</div>
-		</div>
-		
-	</div>
-	
-  </div>
-  
 <%= yield %>
+  
+  
+  
+
 
 </body>
 </html>

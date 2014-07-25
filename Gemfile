@@ -45,3 +45,5 @@ gem 'jquery-ui-rails'
 
 #CSS Framework with grid system
 gem 'foundation-rails'
+
+gem 'devise'

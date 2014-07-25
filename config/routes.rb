@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   end
 
  
- resources :users
 
  
   get 'store/index'

@@ -23,12 +23,13 @@
 
 	<div class="medium-6 large-6 columns text-right">
 		<% unless user_signed_in? %>
-		<%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %></div>
+			<%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %>
 		<% else %>
-		<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+			<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 		<% end %>
 
   </div>
+</div>
 
   <div class="row no-max-width padding-bottom-small padding-top-small responsive-hide">
 	<div class="medium-4 large-3 column">

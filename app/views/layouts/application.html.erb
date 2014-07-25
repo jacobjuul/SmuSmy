@@ -20,15 +20,14 @@
   <div class="row bg-color-grey no-max-width font-century-gothic padding-bottom-small padding-top-small responsive-hide">
 	<div class="medium-6 large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE $75</div>
 
-	
-=======
+
 	<div class="medium-6 large-6 columns text-right">
-		<% unless user_signed_in? then %>
+		<% unless user_signed_in? %>
 		<%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %></div>
 		<% else %>
 		<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 		<% end %>
->>>>>>> c102739effd7e8833abdeae9ac7ca4a6c353d274
+
   </div>
 
   <div class="row no-max-width padding-bottom-small padding-top-small responsive-hide">

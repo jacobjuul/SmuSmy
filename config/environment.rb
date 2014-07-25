@@ -18,7 +18,7 @@ Backend::Application.configure do
 		}
 	end
 
-	ActionMailer::Base.smtp_settings = {
+	'''ActionMailer::Base.smtp_settings = {
 		address: 				"smtp.gmail.com",
 		port: 					"587",
 		domain: 				"gmail.com",
@@ -27,3 +27,4 @@ Backend::Application.configure do
 		password: 			"tDf%2012",
 		enable_starttls_auto: true
 		}
+'''

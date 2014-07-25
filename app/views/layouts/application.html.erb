@@ -70,6 +70,11 @@
 
 <body class="<%= controller.controller_name %>">
 
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+
+
+<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
   <div class="row bg-color-grey no-max-width">
   	<div class="large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE $75</div>
   	<div class="large-6 columns text-right">REGISTER / LOGIN</div>

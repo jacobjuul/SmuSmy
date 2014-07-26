@@ -227,3 +227,10 @@
 		height: 1.6rem !important;
 	}
 
+	input[type="checkbox"],
+	input[type="radio"],
+	select {
+		/*Aligns the input elements correct to the text.*/
+		margin: 0 0 0 0 !important;
+		vertical-align: middle !important;
+	}

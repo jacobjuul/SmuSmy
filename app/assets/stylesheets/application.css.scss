@@ -39,19 +39,50 @@
 		}
 	}
 	
+	.color-pink-pink
+	{
+		color:#FF7BAC !important;
+	}
+	
+	.color-black
+	{
+		color:#000000 !important;
+	}
+	
+	.color-white
+	{
+		color:#FFFFFF !important;
+	}
+	
 	.bg-color-grey
 	{
-		background-color: rgb(183,182,182);
+		background-color: rgb(183,182,182) !important;
 	}
 
 	.bg-color-pink
 	{
-		background-color: rgb(221,158,167);
+		background-color: rgb(221,158,167) !important;
 	}
 	.bg-color-black
 	{
 		background-color: black;
 	}
+	
+	.bg-color-black
+	{
+		background-color:#000000 !important;
+	}
+	
+	.bg-color-black-opaque-10
+	{
+		background-color:#000000 !important;
+	}
+	
+	.bg-color-white
+	{
+		background-color:#FFFFFF !important;
+	}
+	
 	
 	.no-max-width
 	{
@@ -133,6 +164,16 @@
 		Save to box*/
 	}
 	
+	.bold
+	{
+		font-weight:800;
+	}
+	
+	.italic
+	{
+		font-style:italic;
+	}
+	
 	.padding-top-small
 	{
 		padding-top:0.2rem;
@@ -153,6 +194,3 @@
 		height:6rem;
 	}
  
- 	#indexpromo {
- 		color: fff;
- 	}

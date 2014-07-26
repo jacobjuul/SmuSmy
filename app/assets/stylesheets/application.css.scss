@@ -191,5 +191,27 @@
 	}
  
 
+	::-webkit-input-placeholder {
+	   color: #CACACC;
+	   font-family:Century Gothic;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #CACACC;
+	   font-family:Century Gothic;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #CACACC;
+	   font-family:Century Gothic;
+	}
+
+	:-ms-input-placeholder {  
+	   color: #CACACC;
+	   font-family:Century Gothic;
+	}
  
- 
+	.height-small
+	{
+		height: 1.6rem !important;
+	}

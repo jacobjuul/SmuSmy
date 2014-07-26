@@ -9,21 +9,24 @@
 	<div class="medium-7 large-5 column end" style="padding-left:10%;padding-right:10%">
 	
 		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-		  <%= devise_error_messages! %>
-
+		  
 
 		  <div><%= f.label :email, {class:"font-century-gothic color-white"}  %>
 		  <%= f.email_field :email, {autofocus: true, placeholder:"email@address.com", class:"height-small"} %></div>
 
+			<br/>
+		  
 		  <div><%= f.label :password, {class:"font-century-gothic color-white"} %>
 			<%= f.password_field :password, {autocomplete: "off", placeholder:"Use at least 8 characters.", class:"height-small"}%></div>
 
 		  <div><%= f.label :password_confirmation, {class:"font-century-gothic color-white"} %>
 			<%= f.password_field :password_confirmation, {autocomplete: "off", placeholder:"Re-enter password.", class:"height-small"} %></div>
 
+			<%= devise_error_messages! %>
+			
 		  <div style="padding-top:3rem">
 			<center>
-			<%= f.submit "CREATE ACCOUNT", {class:"button font-century-gothic bold italic color-black bg-color-white"} %>
+			<%= f.submit "CREATE ACCOUNT", {class:"button font-century-gothic bold italic color-black bg-color-white letter-space"} %>
 			</center>
 		  </div>
 		<% end %>

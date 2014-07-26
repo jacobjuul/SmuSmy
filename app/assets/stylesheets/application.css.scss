@@ -166,12 +166,18 @@
 	
 	.bold
 	{
-		font-weight:800;
+		font-weight:800 !important;
 	}
 	
 	.italic
 	{
-		font-style:italic;
+		font-style:italic !important;
+	}
+	
+	.letter-space
+	{
+		letter-spacing: 3px;
+		letter-spacing: 0.17rem;
 	}
 	
 	.padding-top-small

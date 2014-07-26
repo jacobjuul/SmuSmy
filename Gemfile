@@ -47,3 +47,5 @@ gem 'jquery-ui-rails'
 gem 'foundation-rails'
 
 gem 'devise'
+
+gem 'activeadmin', github: 'gregbell/active_admin'

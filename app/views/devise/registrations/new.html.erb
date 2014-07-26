@@ -1,24 +1,25 @@
 <div class="row no-max-width" style="background-color:#000000;padding-top:3rem;padding-bottom:5rem">
-	<div class="medium-5 large-4 column">
-		<h2 style="padding-left:20%;padding-top:10%;font-family:Didot;color:#FFFFFF;font-style:italic">Are you new?</h2>
-		<span style="padding-left:30%;font-family:Didot;color:#FFFFFF;font-style:italic;display:inline-block">
-			Join us today to enjoy the <em style="color:#FF7BAC">LAUNCH OFFER</em>
+	<div class="medium-5 large-4 large-offset-1 column">
+		<h2 style="padding-left:25%;padding-top:10%;font-family:Didot;color:#FFFFFF;font-style:italic">Are you new?</h2>
+		<span style="padding-left:30%;font-family:Didot;color:#FFFFFF;font-style:italic;display:inline-block;font-size:20px">
+			Join us today to<br/>
+			enjoy the <em style="color:#FF7BAC">LAUNCH OFFER</em>
 		</span>
 	</div>
-	<div class="medium-7 large-6 large-offset-1 column end" style="padding-left:10%;padding-right:10%">
+	<div class="medium-7 large-5 column end" style="padding-left:10%;padding-right:10%">
 	
 		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 
 
-		  <div><%= f.label :email, {class:"font-century-gothic bold"}  %><br />
-		  <%= f.email_field :email, {autofocus: true, placeholder:"email@address.com"} %></div>
+		  <div><%= f.label :email, {class:"font-century-gothic color-white"}  %>
+		  <%= f.email_field :email, {autofocus: true, placeholder:"email@address.com", class:"height-small"} %></div>
 
-		  <div><%= f.label :password, {class:"font-century-gothic bold"} %><br />
-			<%= f.password_field :password, {autocomplete: "off", placeholder:"Use at least 8 characters."}%></div>
+		  <div><%= f.label :password, {class:"font-century-gothic color-white"} %>
+			<%= f.password_field :password, {autocomplete: "off", placeholder:"Use at least 8 characters.", class:"height-small"}%></div>
 
-		  <div><%= f.label :password_confirmation, {class:"font-century-gothic bold"} %><br />
-			<%= f.password_field :password_confirmation, {autocomplete: "off", placeholder:"Re-enter password."} %></div>
+		  <div><%= f.label :password_confirmation, {class:"font-century-gothic color-white"} %>
+			<%= f.password_field :password_confirmation, {autocomplete: "off", placeholder:"Re-enter password.", class:"height-small"} %></div>
 
 		  <div style="padding-top:3rem">
 			<center>

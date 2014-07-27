@@ -1,4 +1,90 @@
-<h2>Your SmuSmy Shopping Bag</h2>
+<div class="row no-max-width">
+	<div class="medium-10 large-10 medium-offset-1 large-offset-1 column">
+    <h4 class="font-century-gothic italic" style="margin-top:2%">Shopping Bag</h4>
+    <div class="line-large"></div>
+ 
+    <div class="row no-max-width" style="margin-top:2%">
+      <div class="small-1 medium-1 large-1 column" style="margin-top:0.6rem">
+        <center>
+        <input type="checkbox" id="checkbox-mark-all"></input>
+        </center>
+      </div>
+      <div class="small-3 medium-3 large-3 small-offset-3 medium-offset-3 large-offset-3 column responsive-hide">
+        <h5 class="italic font-century-gothic">Description</h5>
+      </div>
+      <div class="small-3 medium-3 large-3 column responsive-hide">
+        <h5 class="italic font-century-gothic">Options</h5>
+      </div>
+      <div class="small-2 medium-2 large-2 column responsive-hide">
+        <h5 class="italic font-century-gothic">Price</h5>
+      </div>
+      
+      <div class="small-8 small-offset-3 responsive-show">
+        <center>
+        <h5 class="italic font-century-gothic" style="display:inline-block">Product Description, Options & Price</h5>
+        </center>
+      </div>
+      
+      
+    </div>
+
+    <div class="line bg-color-pink"></div>
+    
+    <div class="row no-max-width" style="margin-top:2%">
+      <div class="small-1 medium-1 large-1 column" style="margin-top:7%">
+        <center>
+        <input type="checkbox"></input>
+        </center>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <%= image_tag "spongebob.jpg", {style:"max-height:30%"} %>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <h5 class="italic font-century-gothic">Description</h5>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <h5 class="italic font-century-gothic">Qty. 3</h5>
+      </div>
+      <div class="small-2 medium-2 large-2 column">
+        <h5 class="italic font-century-gothic">30 €</h5>
+      </div>
+    </div>   
+
+    <div class="line bg-color-pink" style="margin-top:0.6rem"></div>
+    
+    <div class="row no-max-width" style="margin-top:2%">
+      <div class="small-1 medium-1 large-1 column" style="margin-top:7%">
+        <center>
+        <input type="checkbox"></input>
+        </center>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <%= image_tag "spongebob.jpg", {style:"max-height:30%"} %>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <h5 class="italic font-century-gothic">Description</h5>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <h5 class="italic font-century-gothic">Qty. 3</h5>
+      </div>
+      <div class="small-2 medium-2 large-2 column">
+        <h5 class="italic font-century-gothic">30 €</h5>
+      </div>
+    </div>
+    
+    <div class="line bg-color-pink" style="margin-top:0.6rem"></div>
+    
+    <input type="text" placeholder="Pomo Code"/>
+    <button class="button font-century-gothic bold italic color-white bg-color-black letter-space">CHECKOUT</button>
+     
+	</div>
+</div>
+
+
+
+
+
+
 <table>
 	<%= render(cart.line_items) %>
 	<tr class="total_line">

@@ -1,3 +1,29 @@
+
+    <div class="line bg-color-pink"></div>
+    
+    <div class="row no-max-width" style="margin-top:2%">
+      <div class="small-1 medium-1 large-1 column" style="margin-top:7%">
+        <center>
+        <input type="checkbox"></input>
+        </center>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <%= image_tag line_item.product.image_url, {style:"max-height:30%"} %>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <h5 class="italic font-century-gothic"><%= line_item.product.title %></h5>
+      </div>
+      <div class="small-3 medium-3 large-3 column">
+        <h5 class="italic font-century-gothic">Qty. <%= line_item.quantity%></h5>
+      </div>
+      <div class="small-2 medium-2 large-2 column">
+        <h5 class="italic font-century-gothic"><%= number_to_currency(line_item.total_price) %></h5>
+      </div>
+    </div>   
+
+
+
+
 <% if line_item == @current_item %>
 <tr id='current_item'>
 <% else %>
@@ -5,6 +31,7 @@
 	
 		<td><%= line_item.quantity %> &times;</td>
 		<td><%= line_item.product.title %></td>
+		<td><%= line_item.product.description %></td>
 		<td class="item_price"><%= number_to_currency(line_item.total_price) %> </td>
 </tr>
 <% end %>

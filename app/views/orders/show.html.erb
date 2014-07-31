@@ -21,5 +21,15 @@
   <%= @order.pay_type %>
 </p>
 
+
+
+<!-- Display each product associated with the order -->
+<% @order.line_items.each do |item| %>
+	<strong>Product</strong>:&nbsp;<%= item.product.title %> <strong>Quantity:&nbsp;</strong> <%= item.quantity %> <strong>Total price:&nbsp;</strong> <%= item.product.price * item.quantity %>
+
+	</br>
+<% end %>
+
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

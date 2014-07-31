@@ -40,7 +40,7 @@
 	<div class="medium-4 large-4 large-offset-1 column" style="padding-top:0.8rem;">
 		<center><%=link_to image_tag("logo.png", class: "logo"), store_path%></center>
 	</div>
-	<div class="medium-4 large-4 column text-right font-avnir-book-oblique" style="padding-top:6rem;font-size:14px;font-style:italic">Shopping Bag</div>
+	<div class="medium-4 large-4 column text-right font-avnir-book-oblique" style="padding-top:6rem;font-size:14px;font-style:italic"><%= link_to 'Shopping Bag', @cart %></div>
   </div>
 
   <div class="responsive-show bg-color-grey font-century-gothic text-center">
@@ -68,7 +68,7 @@
   <div class="row no-max-width bg-color-pink padding-bottom-small padding-top-small font-century-gothic">
 	<div class="large-5 large-offset-1 column padding-bottom-small padding-top-small">
 		<div class="row">
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>New&nbsp;Arrivals</center></div>
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center><%= link_to "New Arrivals", "/categories/1"%></center></div>
 			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Earrings</center></div>
 			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Bracelets</center></div>
 		</div>
@@ -76,8 +76,8 @@
 	<div class="large-5 end column padding-bottom-small padding-top-small">
 		<div class="row">
 			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Necklaces</center></div>
+			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Hair</center></div>
 			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Gifts</center></div>
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Sale</center></div>
 		</div>	
 	</div>
   </div>

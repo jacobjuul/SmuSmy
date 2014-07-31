@@ -1,3 +1,4 @@
+
 <div class="row no-max-width show-for-large-up">
 
   <div class="large-9 large-offset-1 end column">
@@ -236,14 +237,13 @@
   
 </div>
 
-
 <div class="row">
   <div class="small-8 medium-8 small-centered large-centered column">
 
     <div style="margin-top:1rem;">
       <p class="italic">You have 7 items.</p>
       
-      <p class="text-right italic">127 €</p>
+      <p class="text-right italic"><%= number_to_currency(cart.total_price) %></p>
 
       <p class="text-right">Tax and Shipping will be<br />calculated at Check Out</p>
       
@@ -260,13 +260,12 @@
 </div>
 
 
-
 <table>
-	<%= render(cart.line_items) %>
-	<tr class="total_line">
-		<td colspan="2">Total</td>
-		<td class="total_cell"><%= number_to_currency(cart.total_price) %> </td>
-	</tr>
+  <%= render(cart.line_items) %>
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(cart.total_price) %> </td>
+  </tr>
 </table>
 
 

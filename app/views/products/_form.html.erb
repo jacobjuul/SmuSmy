@@ -27,7 +27,16 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
+
+<%# add category checkboxes, product[:category_ids] %>
+<div class="field">
+    <%= f.label :category_id, "Select one or more categories" %><br />
+    <%= collection_check_boxes(:product, :category_ids, Category.all, :id, :name) %>
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>

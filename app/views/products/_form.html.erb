@@ -30,7 +30,7 @@
 
 <div class="field">
     <%= f.label :category_id %><br />
-    <%= collection_check_boxes(:products, :category_id, Category.all, :id, :name) %>
+    <%= collection_check_boxes(:product, :category_ids, Category.all, :id, :name) %>
 </div>
 
   <div class="actions">

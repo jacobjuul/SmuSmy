@@ -21,9 +21,13 @@
   <%= @order.pay_type %>
 </p>
 
+
+
 <!-- Display each product associated with the order -->
 <% @order.line_items.each do |item| %>
-	<%= item.product.title %> x <%= item.quantity %> </br>
+	<strong>Product</strong>:&nbsp;<%= item.product.title %> <strong>Quantity:&nbsp;</strong> <%= item.quantity %> <strong>Total price:&nbsp;</strong> <%= item.product.price * item.quantity %>
+
+	</br>
 <% end %>
 
 

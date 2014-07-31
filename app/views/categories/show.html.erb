@@ -2,7 +2,10 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @category.name %>
+  <%= @category.name %></br>
+  <% @category.products.each do |product| %>
+  <%= product.title %></br>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

@@ -49,3 +49,8 @@ gem 'foundation-rails'
 gem 'devise'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+
+#adds image upload and the aws sdk
+#gem 'paperclip'
+#gem 'aws-sdk'

@@ -30,7 +30,7 @@
 
 <%# add category checkboxes, product[:category_ids] %>
 <div class="field">
-    <%= f.label :category_id, "Select one or more categories" %><br />
+    <%= f.label :category_id, "Select one or more categories" %><br>
     <%= collection_check_boxes(:product, :category_ids, Category.all, :id, :name) %>
 </div>
 

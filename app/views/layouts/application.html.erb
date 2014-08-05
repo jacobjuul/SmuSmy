@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <title>SmuSmy</title>
-<%= stylesheet_link_tag    "application", media: "all",
-    "data-turbolinks-track" => true %>
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  
   	
 </head>
 
@@ -88,45 +87,47 @@
 <%= yield %>
   
 
-<div class="bg-color-grey" style="padding-top:1rem">
+<div class="bg-color-black-opaque-10 color-white" style="padding-top:1rem;padding-bottom:2rem">
+
   <center>
-  <%=link_to image_tag("logo.png", {style:"height:3rem"}), store_path%>
-  
-  <p class="font-century-gothic">LOVE <em>yourself</em> MORE</p>
-  
+    <%=link_to image_tag("logo.png", {style:"height:3rem"}), store_path%>
+    <p class="font-century-gothic bold">LOVE <em style="font-weight:200">yourself</em> MORE</p>
   </center>
 
-  <div class="row">
-    <div class="medium-2 medium-offset-1 column">
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
+  <div class="line bg-color-grey" style="margin-left:15%;margin-right:15%;width:auto"></div>
+  
+  <div class="row" style="padding-top:1rem">
+    <div class="medium-2 medium-offset-1 small-offset-2 column">
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
     </div>
-    <div class="medium-2 medium-offset-1 column">
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
+    <div class="medium-2 medium-offset-1 small-offset-2 column">
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
     </div>
-    <div class="medium-2 medium-offset-1 column">
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
+    <div class="medium-2 medium-offset-1 small-offset-2 column">
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
     </div>
-    <div class="medium-2 medium-offset-1 column end">
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
-      <p>Who we are</p>
-    </div>  
+    <div class="medium-2 medium-offset-1 small-offset-2 column end">
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+      <p class="bottom-margin-small">Who we are</p>
+    </div>
   </div>
 </div>
 
 <div class="bg-color-pink">
   <p class="text-right">
-    <span>Pay Pal</span>
+    <span style="padding-right:3rem">Pay Pal</span>
+    <span style="padding-right:3rem">Credit Card</span>
   </p>
 </div>
 

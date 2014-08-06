@@ -16,7 +16,7 @@
   <span class="notice"><%= notice %></span>
   <span class="alert"><%= alert %></span>
 	
-  <div class="row bg-color-grey no-max-width font-century-gothic padding-bottom-small padding-top-small responsive-hide">
+  <div class="hide-for-small-only row bg-color-grey no-max-width font-century-gothic padding-bottom-small padding-top-small responsive-hide">
     <div class="medium-6 large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE €75</div>
 
 
@@ -31,40 +31,33 @@
   
   </div>
 
-  <div class="row no-max-width padding-bottom-small padding-top-small responsive-hide">
-	<div class="medium-4 large-3 column">
-      <div style="padding-top:5rem;">
-		<input type="text" name="input-subscribe" placeholder="Subscribe, enter e-mail address" class="height-small">
-	  </div>
-	</div>
-	<div class="medium-4 large-4 large-offset-1 column" style="padding-top:0.8rem;">
-		<center><%=link_to image_tag("logo.png", class: "logo"), store_path%></center>
-	</div>
-	<div class="medium-4 large-4 column text-right font-avnir-book-oblique" style="padding-top:6rem;font-size:14px;font-style:italic"><%= link_to 'Shopping Bag', cart_path((session[:cart_id])) %></div>
+  <div class="show-for-small-only bg-color-grey font-century-gothic text-center">
+    <div class="padding-bottom-small padding-top-small font-size-10">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
+    <div class="padding-bottom-small padding-top-small">
+      <% unless user_signed_in? then %>
+      <%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %>
+      <% else %>
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% end %>
+    </div>  
+  </div>
+  
+  <div style="display:table; width:100%;margin-top:1rem">
+    <div style="display:table-row;">
+        <div style="display:table-cell; width:20%; position:relative; transform: translateY(-10%);">
+            <input type="text" name="input-subscribe" placeholder="Subscribe, enter e-mail address" class="hide-for-small-only height-small" style="margin-left:1rem">
+        </div>
+        <div class="center" style="display:table-cell;">
+          <%=link_to image_tag("logo.jpg", class: "logo center"), store_path%>
+        </div>
+        <div style="display:table-cell; width:20%; position:relative; transform: translateY(-12%);" class="text-right">
+            <em class="font-avnir-book-oblique" style="margin-right:1rem">
+            <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"hide-for-small-only"} ) %>
+            </em>
+        </div>
+    </div>
   </div>
 
-  <div class="responsive-show bg-color-grey font-century-gothic text-center">
-	<div class="padding-bottom-small padding-top-small font-size-10">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
-	<div class="padding-bottom-small padding-top-small">
-		<% unless user_signed_in? then %>
-		<%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %></div>
-		<% else %>
-		<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-		<% end %>
-	</div>
-  </div>
-  
-  <div class="responsive-show" style="margin-top:1rem">
-	<div class="padding-top-small padding-bottom-small">
-		<center><%=link_to image_tag("logo.png", class: "logo"), store_path%></center>
-	</div>
-	<div class="font-avnir-book-oblique padding-top-small padding-bottom-small" style="font-size:20px;font-style:italic">
-		<center>
-			Shopping Bag
-		</center>
-	</div>
-  </div>
-  
   <div class="row no-max-width bg-color-pink padding-bottom-small padding-top-small font-century-gothic">
 	<div class="large-5 large-offset-1 column padding-bottom-small padding-top-small">
 		<div class="row">
@@ -82,7 +75,9 @@
 	</div>
   </div>
 
- 
+  <div class="show-for-small-only bg-color-black-opaque-10 color-white text-center padding-top-small padding-bottom-small">
+    <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"italic font-avnir-book-oblique font-size-18"} ) %>
+  </div>
 
 <%= yield %>
   

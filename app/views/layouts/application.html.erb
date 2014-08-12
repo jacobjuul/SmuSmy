@@ -15,116 +15,114 @@
 
   <span class="notice"><%= notice %></span>
   <span class="alert"><%= alert %></span>
+
+  <div class="bg-color-black color-white font-century-gothic padding-bottom-small padding-top-small" style="height:2.2rem;">
+  
+    <div class="container">
+      <div style="display:inline;float:left" class="hide-for-small-only">
+        <label class="color-white" for="subscribe" style="padding-top:0.2rem">SUBSCRIBE</label>
+      </div>
+      <div style="display:inline;float:left" class="hide-for-small-only">
+        <input id="subscribe" type="text" name="input-subscribe" placeholder="" class="round color-black" style="margin-left:1rem;height:1.2rem;margin-top:0.3rem;margin-bottom:0;width:16rem">
+      </div>
+      
+      <div style="display:inline;float:right;margin-top:0.4rem" class="text-right color-white">
+        <% unless user_signed_in? %>
+          <%= link_to 'REGISTER', new_user_registration_path, {class:"color-white"} %> / <%= link_to 'LOGIN', new_user_session_path, {class:"color-white"} %>
+        <% else %>
+          <%= link_to 'Sign Out', destroy_user_session_path, {class:"color-white", method:delete}%>
+        <% end %>
+      </div>
+    </div>
+    
+  </div>
+
 	
-  <div class="hide-for-small-only row bg-color-grey no-max-width font-century-gothic padding-bottom-small padding-top-small responsive-hide">
-    <div class="medium-6 large-6 columns">FREE SHIPPING ON ALL ORDERS ABOVE €75</div>
-
-
-    <div class="medium-6 large-6 columns text-right">
-      <% unless user_signed_in? %>
-        <%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %>
-      <% else %>
-        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-      <% end %>
-
+  <div class="bg-color-orange color-white no-max-width font-century-gothic padding-bottom-small padding-top-small">
+    <div class="container">
+      <span style="display:inline-block">FREE SHIPPING ON ALL ORDERS ABOVE €75</span> <span> /// </span> <span style="display:inline-block">use the magic code</span>
     </div>
-  
-  </div>
-
-  <div class="show-for-small-only bg-color-grey font-century-gothic text-center">
-    <div class="padding-bottom-small padding-top-small font-size-10">FREE SHIPPING ON ALL ORDERS ABOVE 75</div>
-    <div class="padding-bottom-small padding-top-small">
-      <% unless user_signed_in? then %>
-      <%= link_to 'REGISTER', new_user_registration_path %> /<%= link_to 'LOGIN', new_user_session_path %>
-      <% else %>
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-      <% end %>
-    </div>  
   </div>
   
-  <div style="display:table; width:100%;margin-top:1rem">
-    <div style="display:table-row;">
-        <div style="display:table-cell; width:20%; position:relative; transform: translateY(-10%);">
-            <input type="text" name="input-subscribe" placeholder="Subscribe, enter e-mail address" class="hide-for-small-only height-small" style="margin-left:1rem">
-        </div>
-        <div class="center" style="display:table-cell;">
-          <%=link_to image_tag("logo.jpg", class: "logo center"), store_path%>
-        </div>
-        <div style="display:table-cell; width:20%; position:relative; transform: translateY(-12%);" class="text-right">
-            <em class="font-avnir-book-oblique" style="margin-right:1rem">
-            <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"hide-for-small-only"} ) %>
-            </em>
-        </div>
-    </div>
+  <div class="container" style="margin-left:4rem;margin-top:3rem;margin-bottom:1.5rem">
+    <%=link_to image_tag("logo.jpg", class: "logo"), store_path%>
   </div>
 
-  <div class="row no-max-width bg-color-pink padding-bottom-small padding-top-small font-century-gothic">
-	<div class="large-5 large-offset-1 column padding-bottom-small padding-top-small">
-		<div class="row">
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center><%= link_to "New Arrivals", "/categories/1"%></center></div>
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Earrings</center></div>
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Bracelets</center></div>
-		</div>
-	</div>
-	<div class="large-5 end column padding-bottom-small padding-top-small">
-		<div class="row">
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Necklaces</center></div>
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Hair</center></div>
-			<div class="medium-4 column padding-bottom-small padding-top-small"><center>Gifts</center></div>
-		</div>	
-	</div>
+  <div class="container">
+    <div class="line bg-color-black"></div>
+    
+    <div style="padding-left:3rem; padding-right:3rem; padding-bottom:0.6rem; padding-top:0.6rem;" class="bg-color-white font-century-gothic">
+      
+      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small"><%= link_to "New Arrivals", "/categories/1", {class:"color-black"}%></div>
+      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Earrings</div>
+      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Bracelets</div>
+      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Necklaces</div>
+      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Hair</div>
+      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Gifts</div>
+      
+      <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"color-orange italic font-avnir-book-oblique font-size-18 text-right"} ) %>
+      
+    </div>
+    
+    <div class="line bg-color-black"></div>
   </div>
 
-  <div class="show-for-small-only bg-color-black-opaque-10 color-white text-center padding-top-small padding-bottom-small">
-    <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"italic font-avnir-book-oblique font-size-18"} ) %>
+  <div class="container fill-height">
+    <%= yield %>
   </div>
 
-<%= yield %>
-  
+  <div class="bg-color-turquoise color-white" style="padding-top:4rem;padding-bottom:1rem">
 
-<div class="bg-color-black-opaque-10 color-white" style="padding-top:1rem;padding-bottom:2rem">
+    <%=link_to image_tag("logo.png", {style:"height:6rem;margin-left:auto;margin-right:auto;display:block"}), store_path%>
+      
+    <div style="text-align:center;margin-top:4rem">
+        <p class="font-century-gothic bold">LOVE <em style="font-weight:200">yourself</em> MORE</p>
+    </div>
+      
+  </div>
 
-  <center>
-    <%=link_to image_tag("logo.png", {style:"height:3rem"}), store_path%>
-    <p class="font-century-gothic bold">LOVE <em style="font-weight:200">yourself</em> MORE</p>
-  </center>
+  <div class="bg-color-black color-white">
 
-  <div class="line bg-color-grey" style="margin-left:15%;margin-right:15%;width:auto"></div>
-  
-  <div class="row" style="padding-top:1rem">
-    <div class="medium-2 medium-offset-1 small-offset-2 column">
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-    </div>
-    <div class="medium-2 medium-offset-1 small-offset-2 column">
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-    </div>
-    <div class="medium-2 medium-offset-1 small-offset-2 column">
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-    </div>
-    <div class="medium-2 medium-offset-1 small-offset-2 column end">
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
-      <p class="bottom-margin-small">Who we are</p>
+    <div class="row" style="padding-top:1rem">
+    
+      <div class="medium-2 column">
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+      </div>
+      
+      <div class="medium-2 column">
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+      </div>
+      
+      <div class="medium-4 column">
+        <p class="text-center" style="margin-top:3rem">
+          <span class="text-center">Pay Pal</span>
+          <span style="width:30px;display:inline-block"></span>
+          <span class="text-center">Credit Card</span>
+        </p>
+      </div>
+      
+      <div class="medium-2 column">
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+      </div>
+      
+      <div class="medium-2 column end">
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+        <p class="bottom-margin-small">Who we are</p>
+      </div>
+      
     </div>
   </div>
-</div>
-
-<div class="bg-color-pink">
-  <p class="text-right">
-    <span style="padding-right:3rem">Pay Pal</span>
-    <span style="padding-right:3rem">Credit Card</span>
-  </p>
-</div>
 
 </body>
 </html>

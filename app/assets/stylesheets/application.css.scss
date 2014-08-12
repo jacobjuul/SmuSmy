@@ -15,39 +15,44 @@
  *= require_tree .
  */
  
+  html,body{
+    height:100%
+  }
 
+  .fill-height
+  {
+    min-height:95%;
+    height:auto !important;
+  }
+  
+  div.container
+  {
+    max-width: 1200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 
-.responsive-hide
-	{
-	}
+  @media only screen 
+  and (min-width : 1200px) {
 
-	@media only screen and (max-width: 1000px)
-	{
-		.responsive-hide{
-			display: none;
-		}
-	}
-
-	.responsive-show
-	{
-		display: none;
-	}
-
-	@media only screen and (max-width: 1000px)
-	{
-		.responsive-show{
-			display: block;
-		}
-	}
-
+    div.container
+    {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  }
+  
+  
   div.center
   {
     margin-left:auto;
     margin-right:auto;
     
     /*Center-aligning has no effect if the width is 100%.*/
-    
-    width: 40%;
   }
 
   img.center
@@ -72,6 +77,11 @@
 		color:#FFFFFF !important;
 	}
 	
+  .color-orange
+	{
+		color: #FF816C !important;
+	}
+  
 	.bg-color-grey
 	{
 		background-color: rgb(183,182,182) !important;
@@ -81,6 +91,17 @@
 	{
 		background-color: rgb(221,158,167) !important;
 	}
+
+  .bg-color-orange
+	{
+		background-color: #FF816C !important;
+	}
+
+  .bg-color-turquoise
+	{
+		background-color: #6ACEB6 !important;
+	}
+  
 	.bg-color-black
 	{
 		background-color: black;
@@ -108,13 +129,8 @@
 	
 	.line
 	{
-	  width:100%;
-    height:2px;
-		height:0.2rem;
+    height:1px;
 		background-color:#000000;
-		display:block;
-		border: rgb(191, 191, 191) 0.1rem;
-		border-style: solid;
 	}
   
   .line-large
@@ -267,3 +283,14 @@
 		margin: 0 0 0 0 !important;
 		vertical-align: middle !important;
 	}
+  
+  input.round
+  {
+    border-radius:100px;
+  }
+  
+  .text-center
+  {
+    text-align:center;
+  }
+  

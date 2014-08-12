@@ -27,7 +27,7 @@
   
   div.container
   {
-    max-width: 1200px;
+    max-width: 960px;
     margin-left: 30px;
     margin-right: 30px;
     margin-left: 4rem;
@@ -35,17 +35,59 @@
   }
 
   @media only screen 
-  and (min-width : 1200px) {
+  and (min-width : 960px) {
 
     div.container
     {
-      max-width: 1200px;
+      max-width: 960px;
       margin-left: auto;
       margin-right: auto;
     }
     
   }
   
+  .main-bar
+  {
+    display:inline-block;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+
+  
+  @media only screen
+  and (max-width : 640px) {
+
+    .main-bar
+    {
+      display: inline-block;
+      text-align: center;
+      padding-bottom: 7px;
+      padding-top: 7px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+    }
+    
+  }
+  
+  @media only screen
+  and (max-width : 460px) {
+
+    .main-bar
+    {
+      display: block;
+      text-align: center;
+      padding-bottom: 7px;
+      padding-top: 7px;
+      margin-left: auto;
+      margin-right: auto;
+      width:auto;
+    }
+    
+  }
   
   div.center
   {
@@ -61,7 +103,19 @@
     margin-left:auto;
     margin-right:auto;
   }
+
+  img.go-left
+  {
+    display:block;
+    margin-right:auto;
+  }
 	
+  img.go-right
+  {
+    display:block;
+    margin-left:auto;
+  }
+  
 	.color-pink-pink
 	{
 		color:#FF7BAC !important;

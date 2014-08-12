@@ -44,29 +44,47 @@
     </div>
   </div>
   
-  <div class="container" style="margin-left:4rem;margin-top:3rem;margin-bottom:1.5rem">
-    <%=link_to image_tag("logo.jpg", class: "logo"), store_path%>
+  <div class="container">
+    <div style="margin-top:3rem;margin-bottom:1.5rem">
+      <%=link_to image_tag("logo.jpg", class: "logo"), store_path%>
+    </div>
   </div>
 
   <div class="container">
     <div class="line bg-color-black"></div>
     
-    <div style="padding-left:3rem; padding-right:3rem; padding-bottom:0.6rem; padding-top:0.6rem;" class="bg-color-white font-century-gothic">
+    <div style="padding-left: 20px; padding-bottom:10px; padding-top:10px;" class="bg-color-white font-century-gothic">
       
-      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small"><%= link_to "New Arrivals", "/categories/1", {class:"color-black"}%></div>
-      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Earrings</div>
-      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Bracelets</div>
-      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Necklaces</div>
-      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Hair</div>
-      <div style="display:inline-block; padding-right:3rem" class="padding-bottom-small padding-top-small">Gifts</div>
-      
-      <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"color-orange italic font-avnir-book-oblique font-size-18 text-right"} ) %>
+          <div class="main-bar"><%= link_to "New Arrivals", "/categories/1", {class:"color-black"}%></div>
+
+          <div class="main-bar">Earrings</div>
+
+          <div class="main-bar">Bracelets</div>
+        
+          <div class="main-bar">Necklaces</div>
+
+          <div class="main-bar">Hair</div>
+
+          <div class="main-bar">Gifts</div>
+
+          <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"main-bar color-orange italic font-avnir-book-oblique font-size-18"} ) %>
       
     </div>
     
     <div class="line bg-color-black"></div>
   </div>
 
+  <div class="container"  style="margin-top:10px">
+    <div class="row collapse">
+      <div class="medium-6 large-6 column">
+      <%=link_to image_tag("index-1.jpg", {style:"max-height:400px;", class:"go-right"})%>
+      </div>
+      <div class="medium-6 large-6 column">
+      <%=link_to image_tag("index-2.jpg", {style:"max-height:400px;", class:"go-left"})%>
+      </div>
+    </div>
+  </div>
+  
   <div class="container fill-height">
     <%= yield %>
   </div>

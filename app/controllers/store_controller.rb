@@ -4,7 +4,11 @@ include CurrentCart
 before_action :set_cart
 
   def index
+
+  	@frontpage = Category.where(name: 'Front Page')
+
   	@products = Product.order(:title)
   	@user = User.name
+
   end
 end

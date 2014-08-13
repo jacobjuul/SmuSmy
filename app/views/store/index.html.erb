@@ -4,6 +4,8 @@
 
 <div style="margin-left:auto; margin-right: auto;">
 
+
+
 <% cache ['store', Product.latest] do %>
 	<% @products.each do |product| %>
 		<% cache ['entry', product] do %>

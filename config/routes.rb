@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   scope '(:locale)' do
     resources :orders
     resources :line_items
-    resources :carts
+    resources :carts, path: "cart"
     root 'store#index', as: 'store', via: :all
   end
 

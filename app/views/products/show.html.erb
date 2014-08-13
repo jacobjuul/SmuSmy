@@ -6,9 +6,9 @@
   
     <div class="large-5 column" style="padding:2%">
 		<center>
-			<span style="font-size:4rem;vertical-align:middle;">&lt;</span>
-				<%=link_to image_tag("spongebob.jpg"), store_path %>
-			<span style="font-size:4rem;vertical-align:middle;">&gt;</span>
+			
+				<%=link_to image_tag(@product.image_url), @product %>
+			
 		</center>
 	</div>
 	
@@ -16,11 +16,11 @@
 		
 		<div class="row">
 			<div class="medium-8 column" style="padding:1%">
-				<span class="font-century-schoolbook" style="font-style:italic;font-weight:800;font-size:2rem">She's Badass Earrings</span>
+				<span class="font-century-schoolbook" style="font-style:italic;font-weight:800;font-size:2rem"><%= @product.title %></span>
 				
 				<div class="font-century-gothic" style="padding-top:4%;padding-left:10%">
-					<p style="margin-bottom:0;">Description here.</p>
-					<p>Available in Gold and Silver.</p>
+					<p style="margin-bottom:0;"><%= @product.description %></p>
+					
 					<p style="margin-bottom:0;">Gold Plated 18K</p>
 					<p>2.4cm * 1.5cm</p>
 					<p>Product Code 238805</p>

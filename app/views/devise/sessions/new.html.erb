@@ -1,35 +1,46 @@
-<div class="row no-max-width bg-color-black-opaque-10" style="padding-top:10%;padding-bottom:5rem">
-	<div class="medium-5 large-4 large-offset-1 column">
+<div class="row no-max-width bg-color-white" style="padding-top:30px">
+
+	<div class="medium-6 large-6 column">
 		<center>
-			<h2 style="font-family:Didot;color:#FFFFFF;font-style:italic">Not registered?</h2>
+			<h2 style="font-family:Didot;color:#000000;font-style:italic">Not registered?</h2>
 			
 			<%= link_to(new_user_registration_path, html_options = {}) do %>
-			    <button type="button" class="font-century-gothic bold italic color-black bg-color-white letter-space" style="margin-top:5%">CREATE ACCOUNT</button>
+			    <button type="button" class="font-century-gothic bold italic color-black bg-color-turquoise letter-space" style="margin-top:5%">CREATE ACCOUNT</button>
 			<% end %>
 
 		</center>
 	</div>
-	<div class="medium-7 large-5 column end" style="padding-left:10%;padding-right:10%">
+	<div class="medium-6 large-6 column end" style="padding-left:10%;padding-right:10%">
 	
+    <%= content_tag(:div, flash[:error], :id => "flash_error", :class => "font-century-gothic color-orange", :style => "margin-bottom:10px") if flash[:error] %>
+    <%= content_tag(:div, flash[:notice], :id => "flash_notice", :class => "font-century-gothic color-orange", :style => "margin-bottom:10px") if flash[:notice] %>
+    <%= content_tag(:div, flash[:alert], :id => "flash_alert", :class => "font-century-gothic color-orange", :style => "margin-bottom:10px") if flash[:alert] %>
+    
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-		  <div><%= f.label :email, {class:"font-century-gothic color-white"} %>
+      <div><%= f.label( :email, "Email", {class:"font-century-gothic color-turquoise"})  %>
 		  <%= f.email_field :email, {autofocus: true, placeholder:"email@address.com", class:"height-small"} %></div>
 
-		  <div><%= f.label :password, {class:"font-century-gothic color-white"} %>
+		  <div><%= f.label :password, "Password", {class:"font-century-gothic color-turquoise"} %>
 			<%= f.password_field :password, {autocomplete: "off", class:"height-small"} %></div>
 
 		  <% if devise_mapping.rememberable? -%>
-			<div><%= f.check_box :remember_me%> <%= f.label :remember_me, {class:"font-century-gothic color-white"} %></div>
+			<div><%= f.check_box :remember_me%> <%= f.label :remember_me, {class:"font-century-gothic color-turquoise"} %></div>
 		  <% end -%>
-		  <div style="padding-top:3rem">
-			<center>
-				<%= f.submit "LOGIN", {class:"button font-century-gothic bold italic color-black bg-color-white letter-space"} %>
-			</center>
-		  </div>
+      
+      <div style="margin-top:20px">
+        <%= f.submit "LOGIN", {class:"button expand font-century-gothic bold italic color-black bg-color-turquoise letter-space"} %>
+      </div>
+      
 		<% end %>
 
+    <%- if devise_mapping.recoverable? %>
+    <div style="margin-top:30px;margin-bottom:30px">
+    <%= link_to "Forgot your password?", new_password_path(resource_name), {class:"color-turquoise letter-space italic", style:"font-size:12px"} %>
+    </div>
+    <% end -%>
+    
 	</div>
 </div>
 
 
-<%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>

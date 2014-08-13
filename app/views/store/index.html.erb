@@ -17,7 +17,7 @@
 
 <!-- Displays products that belongs to the front page category -->
 <% @frontpage.each do |item| %>
-<%= item.title %> </br>
+<%= link_to item.title, item %> </br>
 <% end %>
 
 <% cache ['store', Product.latest] do %>

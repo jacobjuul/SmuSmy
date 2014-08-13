@@ -15,7 +15,10 @@
 
 <div style="margin-left:auto; margin-right: auto;">
 
-
+<!-- Displays products that belongs to the front page category -->
+<% @frontpage.each do |item| %>
+<%= item.title %> </br>
+<% end %>
 
 <% cache ['store', Product.latest] do %>
 	<% @products.each do |product| %>

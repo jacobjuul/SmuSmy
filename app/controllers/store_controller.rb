@@ -5,7 +5,7 @@ before_action :set_cart
 
   def index
 
-  	@frontpage = Category.where(name: 'Front Page')
+  	@frontpage = Category.find(9).products
 
   	@products = Product.order(:title)
   	@user = User.name

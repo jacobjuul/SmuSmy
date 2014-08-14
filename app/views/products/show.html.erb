@@ -1,5 +1,5 @@
 <div class="font-calibri" style="padding-top:1rem">
-    <span style="padding-left:2rem">HOME / EARRINGS</span>
+    <span style="padding-left:2rem">HOME / EARRINGS / <%= @product.title %> </span>
   </div>
 
   <div class="row no-max-width" style="padding:2%">
@@ -24,8 +24,9 @@
 					<p style="margin-bottom:0;">Gold Plated 18K</p>
 					<p>2.4cm * 1.5cm</p>
 					<p>Product Code 238805</p>
-					
-					<div style="padding-top:15%">
+					<p class="color-turquoise">In Stock</p>
+          
+					<div style="padding-top:15%; display:none">
 						<div>
 							<span style="font-weight:800">FOLLOW US</span>
 							<div style="margin-top:4px;">
@@ -45,8 +46,11 @@
 
 				<div class="row">
 				
-					<div class="small-12 column center">
-						<input type="text" placeholder="Gold or Silver?">
+					<div class="small-12 column">
+						<select style="margin-top:10px;margin-bottom:10px;">
+              <option value="product-id-238805">Gold</option>
+              <option value="product-id-236666">Silver</option>
+            </select>
 					</div>
 					
 				</div>
@@ -60,14 +64,14 @@
 				<div class="row">
 				
 					<div class="small-12 column center">
-						<button class="button expand">Add to bag</button>
+						<button class="button expand  bg-color-turquoise letter-space font-century-gothic">Add to Bag</button>
 					</div>
 
 				</div>
 				<div class="row">
 				
 					<div class="small-12 column center">
-						<button class="button expand">Save to box</button>
+						<button class="button expand bg-color-turquoise letter-space font-century-gothic">Save to Box</button>
 					</div>
 
 				</div>
@@ -79,8 +83,28 @@
 	
   </div>
   
+  <div class="line"></div>
+
+  <div class="row no-max-width" style="margin-top:30px;margin-bottom:30px">
   
-  <div class="row no-max-width">
+      <div class="medium-3 column" style="padding:3%">
+      <%=link_to image_tag("spongebob.jpg"), store_path %>
+      </div>
+      <div class="medium-3 column" style="padding:3%">
+      <%=link_to image_tag("spongebob.jpg"), store_path %>
+      </div>
+      <div class="medium-3 column" style="padding:3%">
+      <%=link_to image_tag("spongebob.jpg"), store_path %>
+      </div>
+      <div class="medium-3 column" style="padding:3%">
+      <%=link_to image_tag("spongebob.jpg"), store_path %>
+      </div>
+      
+  </div>
+  
+  <div class="line" style="margin-bottom:30px"></div>
+  
+  <div class="row no-max-width" style="display:none;margin-top:30px;margin-bottom:30px">
   
 	<div class="large-6 column">
 		Recently Viewed Items

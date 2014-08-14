@@ -87,6 +87,11 @@
       width:auto;
     }
     
+    .for-small-only-hide-cell
+    {
+      display: none !important;
+    }
+    
   }
   
   div.center
@@ -146,6 +151,11 @@
 		background-color: rgb(183,182,182) !important;
 	}
 
+  .bg-color-light-grey
+  {
+    background-color: #F7F7F7 !important;
+  }
+  
 	.bg-color-pink
 	{
 		background-color: rgb(221,158,167) !important;

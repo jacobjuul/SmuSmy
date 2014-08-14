@@ -13,5 +13,11 @@ ActiveAdmin.register Product do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+
+  permit_params :quantity
+
+
+
+  
   
 end

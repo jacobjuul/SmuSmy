@@ -15,12 +15,14 @@
 
 <div style="margin-left:auto; margin-right: auto;">
 
+<!-- Displays products that belongs to the front page category -->
+
 <% cache ['store', Product.latest] do %>
-	<% @products.each do |product| %>
+	<% @frontpage.each do |product| %>
 		<% cache ['entry', product] do %>
     
 		  <div style="display:inline-block; width:236px">
-		    <%= image_tag(product.image_url, {style:"height:292px"}) %>
+		   <%= link_to image_tag(product.image_url, {style:"height:292px; height:auto;"}), product %>
         
 		    <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= link_to product.title, product, {class:"color-black font-century-gothic"} %></p>
 		    <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "DKK ", separator: ",") %></p>
@@ -31,59 +33,6 @@
 		    </div>
         
 		  </div>
-
-		  <div style="display:inline-block; width:236px">
-		    <%= image_tag(product.image_url, {style:"height:292px"}) %>
-        
-		    <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= link_to product.title, product, {class:"color-black font-century-gothic"} %></p>
-		    <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "DKK ", separator: ",") %></p>
-        
-		    <div>
-		      <%#= sanitize(product.description) %>
-		      <%#= button_to 'Add to Cart', line_items_path(product_id: product) %>
-		    </div>
-        
-		  </div>
-
-		  <div style="display:inline-block; width:236px">
-		    <%= image_tag(product.image_url, {style:"height:292px"}) %>
-        
-		    <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= link_to product.title, product, {class:"color-black font-century-gothic"} %></p>
-		    <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "DKK ", separator: ",") %></p>
-        
-		    <div>
-		      <%#= sanitize(product.description) %>
-		      <%#= button_to 'Add to Cart', line_items_path(product_id: product) %>
-		    </div>
-        
-		  </div>
-
-		  <div style="display:inline-block; width:236px">
-		    <%= image_tag(product.image_url, {style:"height:292px"}) %>
-        
-		    <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= link_to product.title, product, {class:"color-black font-century-gothic"} %></p>
-		    <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "DKK ", separator: ",") %></p>
-        
-		    <div>
-		      <%#= sanitize(product.description) %>
-		      <%#= button_to 'Add to Cart', line_items_path(product_id: product) %>
-		    </div>
-        
-		  </div>
-
-		  <div style="display:inline-block; width:236px">
-		    <%= image_tag(product.image_url, {style:"height:292px"}) %>
-        
-		    <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= link_to product.title, product, {class:"color-black font-century-gothic"} %></p>
-		    <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "DKK ", separator: ",") %></p>
-        
-		    <div>
-		      <%#= sanitize(product.description) %>
-		      <%#= button_to 'Add to Cart', line_items_path(product_id: product) %>
-		    </div>
-        
-		  </div>      
-      
       
 		 <% end %>
 	<% end %>	  

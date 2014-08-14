@@ -8,7 +8,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  	
+    
 </head>
 
 <body class="<%= controller.controller_name %>">
@@ -37,7 +37,7 @@
     
   </div>
 
-	
+  
   <div class="bg-color-orange color-white no-max-width font-century-gothic padding-bottom-small padding-top-small">
     <div class="container" style="font-size:14px">
       <span style="display:inline-block">FREE SHIPPING ON ALL ORDERS ABOVE 400kr.</span> <span style="margin-left:20px;margin-right:20px"> /// </span> <span style="display:inline-block">10% OFF YOUR FIRST ORDER, USE PROMO CODE: <b>SMUSMY10</b></span>
@@ -55,21 +55,21 @@
     
     <div style="padding-left: 20px; padding-bottom:10px; padding-top:10px;" class="bg-color-white font-century-gothic">
       
-          <div class="main-bar"><%= link_to "New Arrivals", "/categories/1", {class:"color-black"}%></div>
+          <div class="main-bar"><%= link_to "New Arrivals", category_link('New Arrivals'), {class:"color-black"}%></div>
 
-          <div class="main-bar">Earrings</div>
+          <div class="main-bar"><%= link_to "Earrings", category_link('Earrings'),{class:"color-black"}%></div>
 
-          <div class="main-bar">Rings</div>
+          <div class="main-bar"><%= link_to "Rings", category_link('Rings'),{class:"color-black"}%></div>
           
-          <div class="main-bar">Bracelets</div>
+          <div class="main-bar"><%= link_to "Bracelets", category_link('Bracelets'),{class:"color-black"}%></div>
         
-          <div class="main-bar">Necklaces</div>
+          <div class="main-bar"><%= link_to "Necklaces", category_link('Necklaces'),{class:"color-black"}%></div>
 
-          <div class="main-bar">Hair</div>
+          <div class="main-bar"><%= link_to "Hair", category_link('Hair'),{class:"color-black"}%></div>
 
-          <div class="main-bar">Gifts</div>
+          <div class="main-bar"><%= link_to "Gifts", category_link('Gifts'),{class:"color-black"}%></div>
 
-          <div class="main-bar">Show All</div>
+          <div class="main-bar"><%= link_to "Show All", products_path, {class:"color-black"} %></div>
           
           <%#= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"main-bar color-orange italic font-avnir-book-oblique font-size-18"} ) %>
           

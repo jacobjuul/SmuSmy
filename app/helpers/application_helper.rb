@@ -23,5 +23,18 @@ module ApplicationHelper
       error_array.join(" ")
     end
   end
+
+
+  def category_link(category_name)
+    link = Category.find_by(:name => category_name)
+    if link.nil? 
+      store_path
+    else
+      link
+    end
+
+
+
+  end
   
 end

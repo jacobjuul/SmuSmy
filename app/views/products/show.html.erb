@@ -1,5 +1,6 @@
-<div class="font-calibri" style="padding-top:1rem">
-    <span style="padding-left:2rem">  <%= link_to 'Home', store_path  %> &nbsp; / &nbsp; <%= link_to @category.name, category_link(@category.name) %> &nbsp; / &nbsp; <%= @product.title %> </span>
+
+  <div class="font-calibri" style="padding:30px">
+    <%= link_to 'Home', store_path  %> &nbsp; / &nbsp; <%= link_to @category.name, category_link(@category.name) %> &nbsp; / &nbsp; <%= @product.title %>
   </div>
 
   <div class="row no-max-width" style="padding:2%">

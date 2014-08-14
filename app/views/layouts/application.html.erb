@@ -39,8 +39,8 @@
 
 	
   <div class="bg-color-orange color-white no-max-width font-century-gothic padding-bottom-small padding-top-small">
-    <div class="container">
-      <span style="display:inline-block">FREE SHIPPING ON ALL ORDERS ABOVE €75</span> <span> /// </span> <span style="display:inline-block">use the magic code</span>
+    <div class="container" style="font-size:14px">
+      <span style="display:inline-block">FREE SHIPPING ON ALL ORDERS ABOVE 400kr.</span> <span style="margin-left:20px;margin-right:20px"> /// </span> <span style="display:inline-block">10% OFF YOUR FIRST ORDER, USE PROMO CODE: <b>SMUSMY10</b></span>
     </div>
   </div>
   
@@ -59,6 +59,8 @@
 
           <div class="main-bar">Earrings</div>
 
+          <div class="main-bar">Rings</div>
+          
           <div class="main-bar">Bracelets</div>
         
           <div class="main-bar">Necklaces</div>
@@ -67,8 +69,19 @@
 
           <div class="main-bar">Gifts</div>
 
-          <%= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"main-bar color-orange italic font-avnir-book-oblique font-size-18"} ) %>
-      
+          <div class="main-bar">Show All</div>
+          
+          <%#= link_to('Shopping Bag', cart_path((session[:cart_id])),{class:"main-bar color-orange italic font-avnir-book-oblique font-size-18"} ) %>
+          
+          <div class="main-bar">
+            <a href="<%= cart_path((session[:cart_id])) %>">
+              <span class="color-orange italic font-avnir-book-oblique font-size-18">Shopping Bag</span>
+              <div style="display:inline-block;width:50px;height:40px;background-image:url('/assets/bag.jpg');background-size: 100% 100%;background-repeat: no-repeat;vertical-align:middle">
+              <%#= link_to( image_tag("bag.jpg", {style:"height: 40px"}), cart_path((session[:cart_id])) ) %>
+                <p class="color-orange" style="padding-top:13px;padding-right:2px;text-align:center;font-size:12px">100</p>
+              </div>
+            </a>
+          </div>
     </div>
     
     <div class="line bg-color-black"></div>

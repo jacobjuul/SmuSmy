@@ -1,29 +1,49 @@
+  
+  <div style="display:table;margin-top:10px;margin-bottom:10px;width:100%">
+  
+    <div style="display:table-row;margin-top:10px;margin-bottom:10px">
+   
+      <div style="display:table-cell;vertical-align:middle; width:55%">
+        <a class="th" href="#"><%= image_tag( line_item.product.image_url, {style:"height:8rem;width:8rem"}) %></a>
+        
+        <div style="display:inline-block;vertical-align:top;padding:20px;">
+          <h6 class="italic font-century-gothic"><%= line_item.product.title %></h6>
+          <p><%#= number_to_currency(line_item.price) %></p>
+          <p>Something something gold silver.</p>
+          <p>Product ID# 1231</p>
+          <p class="color-orange">Not in Stock - Back ordered by 21/12</p>
+        </div>
 
-    <div class="line bg-color-pink"></div>
+        <div class="show-for-small-only" style="padding:20px;">
+          <label style="display:inline-block">Qty.</label>
+          <input type="text" value="<%= line_item.quantity %>" class="italic font-century-gothic" style="display:inline-block;margin:0;text-align:center;max-width:100px" placeholder="Qty.">
+        </div>
+        
+        <div class="show-for-small-only" style="padding:20px;">
+          <p class="italic font-century-gothic">Price: <%= number_to_currency(line_item.total_price) %></p>
+        </div>
+      
+      </div>
+      
+      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%">
+        <input type="text" value="<%= line_item.quantity %>" class="hide-for-small-only italic font-century-gothic" style="margin:0;text-align:center;max-width:100px" placeholder="Qty.">
+      </div>
+      
+      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%; text-align:-webkit-right;">
+        <p class="hide-for-small-only italic font-century-gothic" style="padding:30px"><%= number_to_currency(line_item.total_price) %></p>
+      </div>
+
+      <div style="display:table-cell;vertical-align:top; width:5%;text-align:right">
+        <button class="font-century-gothic color-black bg-color-light-grey" style="padding:0.1rem 0.4rem 0.1rem 0.4rem; margin-bottom:0;">X</button>
+      </div>
+      
+    </div><!-- end of row -->
     
-    <div class="row no-max-width" style="margin-top:2%">
-      <div class="small-1 medium-1 large-1 column" style="margin-top:7%">
-        <center>
-        <input type="checkbox"></input>
-        </center>
-      </div>
-      <div class="small-3 medium-3 large-3 column">
-        <%= image_tag line_item.product.image_url, {style:"max-height:30%"} %>
-      </div>
-      <div class="small-3 medium-3 large-3 column">
-        <h5 class="italic font-century-gothic"><%= line_item.product.title %></h5>
-      </div>
-      <div class="small-3 medium-3 large-3 column">
-        <h5 class="italic font-century-gothic">Qty. <%= line_item.quantity%></h5>
-      </div>
-      <div class="small-2 medium-2 large-2 column">
-        <h5 class="italic font-century-gothic"><%= number_to_currency(line_item.total_price) %></h5>
-      </div>
-    </div>   
+  </div>
 
-
-
-
+  <div class="line"></div> <!-- line -->
+  
+<!--
 <% if line_item == @current_item %>
 <tr id='current_item'>
 <% else %>
@@ -35,3 +55,4 @@
 		<td class="item_price"><%= number_to_currency(line_item.total_price) %> </td>
 </tr>
 <% end %>
+-->

@@ -3,144 +3,14 @@
   
     <div class="line-large"></div>
   
-  <div style="display:table;margin-top:10px;margin-bottom:10px;width:100%">
-  
-    <div style="display:table-row;margin-top:10px;margin-bottom:10px">
-   
-      <div style="display:table-cell;vertical-align:middle; width:55%">
-        <a class="th" href="#"><%= image_tag "spongebob.jpg", {style:"height:8rem;width:8rem"} %></a>
-        
-        <div style="display:inline-block;vertical-align:top;padding:20px;">
-          <h6 class="italic font-century-gothic">Title Description</h6>
-          <p>30 €</p>
-          <p>Something something gold silver.</p>
-          <p>Product ID# 1231</p>
-          <p class="color-orange">Not in Stock - Back ordered by 21/12</p>
-        </div>
-
-        <div class="show-for-small-only" style="padding:20px;">
-          <label style="display:inline-block">Qty.</label>
-          <input type="text" value="1" class="italic font-century-gothic" style="display:inline-block;margin:0;text-align:center;max-width:100px" placeholder="Qty.">
-        </div>
-        
-        <div class="show-for-small-only" style="padding:20px;">
-          <p class="italic font-century-gothic">Price: 90 €</p>
-        </div>
-      
-      </div>
-      
-      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%">
-        <input type="text" value="1" class="hide-for-small-only italic font-century-gothic" style="margin:0;text-align:center;max-width:100px" placeholder="Qty.">
-      </div>
-      
-      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%; text-align:-webkit-right;">
-        <p class="hide-for-small-only italic font-century-gothic" style="padding:30px">90 €</p>
-      </div>
-
-      <div style="display:table-cell;vertical-align:top; width:5%;text-align:right">
-        <button class="font-century-gothic color-black bg-color-light-grey" style="padding:0.1rem 0.4rem 0.1rem 0.4rem; margin-bottom:0;">X</button>
-      </div>
-      
-    </div><!-- end of row -->
-    
-  </div>
+    <%= render(cart.line_items) %>
   
     <div class="line"></div>
- 
-  <div style="display:table;margin-top:10px;margin-bottom:10px;width:100%">
   
-    <div style="display:table-row;margin-top:10px;margin-bottom:10px">
-   
-      <div style="display:table-cell;vertical-align:middle; width:55%">
-        <a class="th" href="#"><%= image_tag "ghetto.jpg", {style:"height:8rem;width:8rem"} %></a>
-        
-        <div style="display:inline-block;vertical-align:top;padding:20px;">
-          <h6 class="italic font-century-gothic">Title Description</h6>
-          <p>70 €</p>
-          <p>happy sponge bob.</p>
-          <p>Product ID# 1231</p>
-          <p class="color-turquoise">In Stock</p>
-        </div>
-
-        <div class="show-for-small-only" style="padding:20px;">
-          <label style="display:inline-block">Qty.</label>
-          <input type="text" value="2" class="italic font-century-gothic" style="display:inline-block;margin:0;text-align:center;max-width:100px" placeholder="Qty.">
-        </div>
-        
-        <div class="show-for-small-only" style="padding:20px;">
-          <p class="italic font-century-gothic"><span>Price:</span><span> 140 €</span></p>
-        </div>
-      
-      </div>
-      
-      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%">
-        <input type="text" value="2" class="hide-for-small-only italic font-century-gothic" style="margin:0;text-align:center;max-width:100px" placeholder="Qty.">
-      </div>
-      
-      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%; text-align:-webkit-right;">
-        <p class="hide-for-small-only italic font-century-gothic" style="padding:30px"><span> 140 €</span></p>
-      </div>
-
-      <div style="display:table-cell;vertical-align:top; width:5%;text-align:right">
-        <button class="font-century-gothic color-black bg-color-light-grey" style="padding:0.1rem 0.4rem 0.1rem 0.4rem; margin-bottom:0;">X</button>
-      </div>
-      
-    </div><!-- end of row -->
-    
-  </div>
-
-    <div class="line"></div>
- 
-  <div style="display:table;margin-top:10px;margin-bottom:10px;width:100%">
-  
-    <div style="display:table-row;margin-top:10px;margin-bottom:10px">
-   
-      <div style="display:table-cell;vertical-align:middle; width:55%">
-        <a class="th" href="#"><%= image_tag "ghetto.jpg", {style:"height:8rem;width:8rem"} %></a>
-        
-        <div style="display:inline-block;vertical-align:top;padding:20px;">
-          <h6 class="italic font-century-gothic">Title Description</h6>
-          <p>70 €</p>
-          <p>happy sponge bob.</p>
-          <p>Product ID# 1231</p>
-          <p class="color-orange">Sold Out</p>
-        </div>
-
-        <div class="show-for-small-only" style="padding:20px;">
-          <label style="display:inline-block">Qty.</label>
-          <input type="text" value="2" class="italic font-century-gothic" style="display:inline-block;margin:0;text-align:center;max-width:100px" placeholder="Qty.">
-        </div>
-        
-        <div class="show-for-small-only" style="padding:20px;">
-          <p class="italic font-century-gothic"><span>Price:</span><span> 140 €</span></p>
-        </div>
-      
-      </div>
-      
-      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%">
-        <input type="text" value="2" class="hide-for-small-only italic font-century-gothic" style="margin:0;text-align:center;max-width:100px" placeholder="Qty.">
-      </div>
-      
-      <div class="for-small-only-hide-cell" style="display:table-cell;vertical-align:middle; width:20%; text-align:-webkit-right;">
-        <p class="hide-for-small-only italic font-century-gothic" style="padding:30px"><span> 140 €</span></p>
-      </div>
-
-      <div style="display:table-cell;vertical-align:top; width:5%;text-align:right">
-        <button class="font-century-gothic color-black bg-color-light-grey" style="padding:0.1rem 0.4rem 0.1rem 0.4rem; margin-bottom:0;">X</button>
-      </div>
-      
-    </div><!-- end of row -->
-    
-  </div>
-  
-    <div class="line"></div>
-    
-  <div>
+  <div> <!-- Total price etc. -->
   
     <div style="margin-top:20px;margin-bottom:20px;">
- 
-
-        
+  
       <div style="display:inline-block;width:49%;min-width:250px;vertical-align:top">
 
         <div style="max-width:300px;">
@@ -157,7 +27,7 @@
         </div>
       
         <div style="text-align:right;">
-          <p class="text-right italic font-century-gothic">127 €</p>
+          <p class="text-right italic font-century-gothic"><%= number_to_currency(cart.total_price) %></p>
         </div>
         
         <p class="text-right" style="font-size:12px">Tax and Shipping will be<br>calculated at Check Out</p>
@@ -172,9 +42,12 @@
 
   </div>
 
+  
+<%#= render(cart.line_items) %>
+
 <!--
 <table>
-  <%#= render(cart.line_items) %>
+  
   <tr class="total_line">
     <td colspan="2">Total</td>
     <td class="total_cell"><%= number_to_currency(cart.total_price) %> </td>

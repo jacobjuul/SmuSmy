@@ -55,7 +55,7 @@
 				<div class="row">
 				
 					<div class="small-12 column center">
-            <%= button_to( 'Add to Bag', line_items_path(product_id: @product), {class:"button expand  bg-color-turquoise letter-space font-century-gothic"} )%>
+            <%= button_to( 'Add to Bag', line_items_path(product_id: @product), {remote: true, class:"button expand  bg-color-turquoise letter-space font-century-gothic", id:"button-bag"} )%>
 						<!-- <button class="button expand  bg-color-turquoise letter-space font-century-gothic">Add to Bag</button>-->
 					</div>
 
@@ -68,6 +68,16 @@
 
 				</div>
 				
+        <div class="row">
+          <!-- Notification -->
+          
+					<div class="small-12 column center">
+						<p id="notify-bag" style="display:none" class="color-turquoise font-century-gothic">Added 1 to bag.</p>
+					</div>
+
+				</div>
+        
+        
 			</div>
 		</div>
 		
@@ -101,4 +111,13 @@
   </div>
   
   <div class="line" style="margin-bottom:60px"></div>
+
+<script>
+$(document).ready(function(){
+  $("#button-bag").click(function(){
+    $("#notify-bag").show(true);
+  });
+});
+</script>
+  
   

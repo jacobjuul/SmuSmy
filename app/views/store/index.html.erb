@@ -1,41 +1,39 @@
-<% if notice %>
-<p id="notice"><%= notice%></p>
-<% end %>
+  <% if notice %>
+  <p id="notice"><%= notice%></p>
+  <% end %>
 
-<div style="margin-top:10px">
-  <div class="row collapse">
-    <div class="medium-6 large-6 column">
-    <%=link_to image_tag("index-1.jpg", {style:"max-height:400px;", class:"go-right"})%>
-    </div>
-    <div class="medium-6 large-6 column">
-    <%=link_to image_tag("index-2.jpg", {style:"max-height:400px;", class:"go-left"})%>
+  <div style="margin-top:10px">
+    <div class="row collapse">
+      <div class="medium-6 large-6 column">
+      <%=link_to image_tag("index-1.jpg", {style:"max-height:400px;", class:"go-right"})%>
+      </div>
+      <div class="medium-6 large-6 column">
+      <%=link_to image_tag("index-2.jpg", {style:"max-height:400px;", class:"go-left"})%>
+      </div>
     </div>
   </div>
-</div>
 
-<div style="margin-left:auto; margin-right: auto;">
+  <div style="margin-left:auto; margin-right: auto; width:100%;margin-top:30px;margin-bottom:60px;">
 
-<!-- Displays products that belongs to the front page category -->
+    <!-- Displays products that belongs to the front page category -->
 
-<% cache ['store', Product.latest] do %>
-	<% @frontpage.each do |product| %>
-		<% cache ['entry', product] do %>
-    
-		  <div style="display:inline-block; width:236px">
-		   <%= link_to image_tag(product.image_url, {style:"height:292px; height:auto;"}), product %>
+    <% cache ['store', Product.latest] do %>
+      <% @frontpage.each do |product| %>
+        <% cache ['entry', product] do %>
         
-		    <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= link_to product.title, product, {class:"color-black font-century-gothic"} %></p>
-		    <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "DKK ", separator: ",") %></p>
+        <a href="<%= url_for(product) %>">
         
-		    <div>
-		      <%#= sanitize(product.description) %>
-		      <%#= button_to 'Add to Cart', line_items_path(product_id: product) %>
-		    </div>
-        
-		  </div>
-      
-		 <% end %>
-	<% end %>	  
-<% end %>
+          <div style="display:inline-block; width:236px">
+            <%= image_tag(product.image_url, {style:"height:292px; height:auto;"}) %>
 
-</div>
+            <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= product.title %></p>
+            <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "kr ", separator: ",") %></p>
+          </div>
+          
+        </a>
+          
+         <% end %>
+      <% end %>	  
+    <% end %>
+
+  </div>

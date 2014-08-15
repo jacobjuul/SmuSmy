@@ -17,7 +17,7 @@
         <%= image_tag(product.image_url, {style:"height:292px; height:auto;"}) %>
 
         <p class="text-center bold italic" style="font-size:15px;margin-bottom:0px;"><%= product.title %></p>
-        <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "kr ", separator: ",") %></p>
+        <p class="font-century-gothic text-center color-black"  style="font-size:15px"><%= number_to_currency(product.price, locale: :en, unit: "kr ", separator: ".", precision: 0, format: "%n %u") %></p>
       </div>
       
     </a>

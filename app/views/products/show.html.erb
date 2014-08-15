@@ -18,27 +18,17 @@
 		<div class="row">
 			<div class="medium-8 column" style="padding:1%">
 				<span class="font-century-schoolbook" style="font-style:italic;font-weight:800;font-size:2rem"><%= @product.title %></span>
-				
-				<div class="font-century-gothic" style="padding-top:4%;padding-left:10%">
-					<p style="margin-bottom:0;"><%= @product.description %></p>
+        
+				<div class="font-century-gothic" style="padding-top:20px;">
+        
+          <p class="font-century-gothic color-black"  style="font-size:24px"><%= number_to_currency(@product.price, locale: :en, unit: "kr ", separator: ".", precision: 0, format: "%n %u") %></p>
+
+					<p style="margin-bottom:10px;"><%= @product.description %></p>
 					
 					<p style="margin-bottom:0;">Gold Plated 18K</p>
 					<p>2.4cm * 1.5cm</p>
 					<p>Product Code 238805</p>
 					<p class="color-turquoise">In Stock</p>
-          
-					<div style="padding-top:15%; display:none">
-						<div>
-							<span style="font-weight:800">FOLLOW US</span>
-							<div style="margin-top:4px;">
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-								<span class="small-black-box"></span>
-							</div>
-						</div>
-					</div>
 					
 				</div>
 
@@ -57,8 +47,8 @@
 				</div>
 				<div class="row">
 				
-					<div class="small-6 small-offset-2 column"><label for="input-quantity" class="right inline">Qty.</label></div>
-					<div class="small-4 column end"><input type="text" name="input-quantity" placeholder="quantity" value="1"></div>
+					<div class="small-6 column"><label for="input-quantity" class="right inline">Qty.</label></div>
+					<div class="small-6 column end"><input id="quantity-box" type="text" name="input-quantity" placeholder="quantity" value="1" style="max-width:100px;text-align:center;"></div>
 					
 				</div>
 				
@@ -109,5 +99,5 @@
     <span style="padding:20px">instagram</span><span style="padding:20px">facebook</span><span style="padding:20px">twitter</span><span style="padding:20px">google plus</span>
   </div>
   
-  <div class="line" style="margin-bottom:30px"></div>
+  <div class="line" style="margin-bottom:60px"></div>
   

@@ -15,3 +15,5 @@ Category.create([{name: 'New Arrivals'},{name: 'Earrings'},{name: 'Rings'},{name
 
 #Create Other Categories
 Category.create([{name: 'Gold'},{name: 'Silver'},{name: 'Leather'},{name: 'Diamond'},{name: 'Small'},{name: 'Large'},{name: 'Shiny'},{name: 'Colorful'},{name: 'Simple Design'},{name: 'Clasic'}])
+
+

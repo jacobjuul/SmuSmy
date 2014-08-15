@@ -15,5 +15,3 @@ Category.create([{name: 'Front Page'},{name: 'New Arrivals'},{name: 'Earrings'},
 
 #Create Other Categories
 Category.create([{name: 'Gold'},{name: 'Silver'},{name: 'Leather'},{name: 'Diamond'},{name: 'Small'},{name: 'Large'},{name: 'Shiny'},{name: 'Colorful'},{name: 'Simple Design'},{name: 'Clasic'}])
-
-

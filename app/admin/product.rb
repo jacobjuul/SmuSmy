@@ -16,11 +16,24 @@ ActiveAdmin.register Product do
 
   permit_params :quantity
 
+  filter :title
+  filter :id
+  filter :price
+  filter :quantity
+  filter :categories
+
+  index do
+    column :id
+    column :title do |link|
+      link_to link.title, admin_product_path(link)
+    end
+    column :price
+    column :quantity
+    actions
+  end
+
+    
 
 
-
-  
-
-
-  
-end
+    
+  end
